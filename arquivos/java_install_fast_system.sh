@@ -70,10 +70,9 @@ docker --version
 			sudo docker exec -it FastSystem bash
 			sleep 2
 			mysql -u root -p
-			sleep 2
 			urubu100
-			CREATE DATABASE FastSystemTeste;
-USE FastSystemTeste;
+			CREATE DATABASE FastSystem;
+USE FastSystem;
 
 
 CREATE TABLE Empresa(
@@ -203,7 +202,10 @@ UPDATE Componente SET
 	nome_componente = 'Disco 1 BEBE', is_ativo = true, modelo_componente = 'SSSTC CA5-8D256-Q79 (Standard disk drives)', capacidade_componente = 256
     WHERE id_componente = 3 AND nome_componente LIKE 'Disco 1%';
 
-
+	exit 
+	sleep 2
+	exit 
+	sleep 2
 
 		sudo git clone https://github.com/FastSystem-G1/BackEnd.git
 
@@ -238,7 +240,6 @@ UPDATE Componente SET
 			sudo docker exec -it FastSystem bash
 			mysql -u root -p
 			urubu100
-			sleep 2
 			CREATE DATABASE FastSystemTeste;
 USE FastSystemTeste;
 
@@ -369,6 +370,11 @@ UPDATE Componente SET
 UPDATE Componente SET 
 	nome_componente = 'Disco 1 BEBE', is_ativo = true, modelo_componente = 'SSSTC CA5-8D256-Q79 (Standard disk drives)', capacidade_componente = 256
     WHERE id_componente = 3 AND nome_componente LIKE 'Disco 1%';
+
+	exit 
+	sleep 2
+	exit 
+	sleep 2
 
 				
 	fi
