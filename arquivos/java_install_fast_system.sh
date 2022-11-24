@@ -75,7 +75,6 @@ docker --version
 			sleep 2
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
-			
 			CREATE TABLE Empresa(
 			id_empresa INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_empresa VARCHAR(100),
@@ -86,7 +85,6 @@ docker --version
 			representante VARCHAR(100),
 			email_empresa VARCHAR(50)
 			)AUTO_INCREMENT = 0;
-			
 			CREATE TABLE Funcionario(
 			id_funcionario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
@@ -98,7 +96,6 @@ docker --version
 			telefone_funcionario VARCHAR(13),
 			FOREIGN KEY(fk_empresa) REFERENCES Empresa(id_empresa)
 			)AUTO_INCREMENT = 100;
-
 			CREATE TABLE Maquina(
 			id_maquina INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
@@ -111,12 +108,10 @@ docker --version
 			senha_maquina VARCHAR(45),
 			FOREIGN KEY(fk_empresa) REFERENCES Empresa(id_empresa)
 			)AUTO_INCREMENT = 0;
-
 			CREATE TABLE App(
 			id_app INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_app VARCHAR(60)
 			)AUTO_INCREMENT = 1000;
-
 			CREATE TABLE App_Empresa(
 			fk_empresa INT,
 			fk_app INT,
@@ -124,7 +119,6 @@ docker --version
 			FOREIGN KEY(fk_app) REFERENCES App(id_app),
 			PRIMARY KEY (fk_empresa, fk_app)
 			);
-
 			CREATE TABLE Registro_Processo(
 			id_registro_processo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_processo VARCHAR(45),
@@ -133,7 +127,6 @@ docker --version
 			fk_maquina INT,
 			FOREIGN KEY (fk_maquina) references Maquina(id_maquina)
 			);
-
 			CREATE TABLE Componente(
 			id_componente INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_componente VARCHAR(45),
@@ -144,43 +137,34 @@ docker --version
 			fk_maquina INT,
 			FOREIGN KEY (fk_maquina) REFERENCES Maquina(id_maquina)
 			);
-				
 			CREATE TABLE Tipo_Registro(
 			id_tipo_registro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			descricao_tipo VARCHAR(20)
 			);
-
 			CREATE TABLE Registro(
 			data_hora DATETIME,
 			medida FLOAT,
 			fk_tipo_registro INT,
 			fk_componente INT,
 			FOREIGN KEY(fk_componente) REFERENCES Componente(id_componente),
-			FOREIGN KEY(fk_tipo_registro) REFERENCES Tipo_Registro(id_tipo_registro)
-			);
-
+			FOREIGN KEY(fk_tipo_registro) REFERENCES Tipo_Registro(id_tipo_registro));
 			INSERT INTO Empresa VALUES 
 			(null, 'FastSystem', 123456789, 02535412, 1522, 11942563656, 'Endryl', "endryl@gmail.com"),
 			(null, 'McDonalds', 987654321, 32654845, 365, 11953145796, 'Donald McDonalds', 'dodo@gmail.com');
-
 			INSERT INTO Maquina VALUES 
 			( null, 1, "DESKTOP", "Desktop 1", '', 0, 'felipe.fastsystem@gmail.com', '1234' ),  
 			( null, 2, "TOTEM", "Totem 1", '', 0, 'endryl.mcdonalds@gmail.com', '12345'),
 			( null, 2, "DESKTOP", "Desktop 1", '', 0, 'vitoria.mcdonalds@gmail.com', '12346');
-
 			INSERT INTO Tipo_Registro VALUES
 			( null, 'GB' ),
 			( null, '%' );
-
 			INSERT INTO Funcionario VALUES 
 			(null, 1, 'Endryl', 1, 12345678912, 'endryl@gmail.com', 12345678, '942518747'),
 			(null, 2, 'Felipe', 1, 98765432112, 'felipe@gmail.com', 12345678, '965321547');
-
 			INSERT INTO App VALUES
 			( null, 'chrome' ),
 			( null, 'WhatsApp' ),
 			( null, 'AnyDesk' );
-				
 			UPDATE Componente SET 
 				nome_componente = 'Processadorrrrr', 
 				is_ativo = true, 
@@ -189,14 +173,12 @@ docker --version
 				capacidade_componente = 10,
 				fk_maquina = 1
 					WHERE id_componente = 1 AND nome_componente LIKE 'Processador%';
-					
 			UPDATE Componente SET 
 				nome_componente = 'Memóriaaaa', 
 				is_ativo = true,
 				capacidade_componente = 10,
 				fk_maquina = 1
 					WHERE id_componente = 2 AND nome_componente LIKE 'Memória%';
-					
 			UPDATE Componente SET 
 	nome_componente = 'Disco 1 BEBE', is_ativo = true, modelo_componente = 'SSSTC CA5-8D256-Q79 (Standard disk drives)', capacidade_componente = 256
     WHERE id_componente = 3 AND nome_componente LIKE 'Disco 1%';
