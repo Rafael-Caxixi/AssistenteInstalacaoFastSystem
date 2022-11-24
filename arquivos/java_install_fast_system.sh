@@ -51,10 +51,11 @@ if [ $? -eq 0 ]
 fi
 
 #----------------BAIXANDO O DOCKER -----------------#
-	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Antes de ver se tem docker!!"
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 54"
 docker --version
-	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Depois de ver se tem docker!!"
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 55"
 if [ $? -eq 0 ]
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 58"
     then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : VOCÊ TEM docker!!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Olá você já tem o docker instalado!!"
@@ -63,8 +64,10 @@ if [ $? -eq 0 ]
             sleep 2
             sudo docker pull mysql:5.7
 			sleep 2
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 67"
 			sudo docker run -d -p 3306:3306 --name FastSystem -e "MYSQLDATABASE=FastSystem" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
-            sleep 2
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 69"
+			sleep 2
 			sudo docker exec -it FastSystem bash
 			mysql -u root -p
 			sleep 2
@@ -72,7 +75,7 @@ if [ $? -eq 0 ]
 			sleep 2
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
-
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 78"
 			CREATE TABLE Empresa(
 			id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 			nome_empresa VARCHAR(100),
@@ -83,7 +86,7 @@ if [ $? -eq 0 ]
 			representante VARCHAR(100),
 			email_empresa VARCHAR(50)
 			)AUTO_INCREMENT = 0;
-
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 89"
 			CREATE TABLE Funcionario(
 			id_funcionario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 			fk_empresa INT,
@@ -363,11 +366,12 @@ if [ $? -eq 0 ]
 
 			sleep 2
 			clear
-	fi
+	
 		else 	
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o docker por enquanto, até a próxima então!"
 		sleep 2
-	
+		
+	fi
 fi
 
 		sudo git clone https://github.com/FastSystem-G1/BackEnd.git
