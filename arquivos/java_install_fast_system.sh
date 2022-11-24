@@ -61,8 +61,7 @@ if [ $? -eq 0 ]
     then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Olá você já tem o docker instalado!!"
 		sleep 2
-		
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Instalando o container mysql 5.7!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
             sleep 2
             sudo docker pull mysql:5.7
 			sleep 2
