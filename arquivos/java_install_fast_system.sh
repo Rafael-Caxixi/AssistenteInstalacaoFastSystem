@@ -51,10 +51,12 @@ if [ $? -eq 0 ]
 fi
 
 #----------------BAIXANDO O DOCKER -----------------#
-
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Antes de ver se tem docker!!"
 docker --version
+	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Depois de ver se tem docker!!"
 if [ $? -eq 0 ]
     then
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : VOCÊ TEM docker!!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Olá você já tem o docker instalado!!"
 		sleep 2
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
