@@ -365,12 +365,7 @@ if [ $? -eq 0 ]
     		WHERE id_componente = 3 AND nome_componente LIKE 'Disco 1%';
 
 			sleep 2
-			clear
-	
-		else 	
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o docker por enquanto, até a próxima então!"
-		sleep 2
-		
+			clear		
 	fi
 fi
 
