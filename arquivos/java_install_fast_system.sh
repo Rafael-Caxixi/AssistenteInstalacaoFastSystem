@@ -363,11 +363,11 @@ if [ $? -eq 0 ]
 
 			sleep 2
 			clear
-
+	fi
 		else 	
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o docker por enquanto, até a próxima então!"
 		sleep 2
-	fi
+	
 fi
 
 		sudo git clone https://github.com/FastSystem-G1/BackEnd.git
