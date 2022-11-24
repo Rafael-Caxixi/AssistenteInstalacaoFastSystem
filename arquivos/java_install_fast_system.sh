@@ -26,8 +26,7 @@ if [ $? -eq 0 ]
 		sleep 2
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (Y/n)?"		
 	read inst
-	if [ \"$inst\" == \"Y\" ]
-		then
+	
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o Java ;D"
 			sleep 2
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Adicionando o repositório!"
@@ -48,10 +47,7 @@ if [ $? -eq 0 ]
 					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Java instalado com sucesso!"
 					sleep 1
 				fi
-		else 	
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Java por enquanto, até a próxima então!"
-		sleep 1
-	fi
+		
 fi
 
 #----------------BAIXANDO O DOCKER -----------------#
