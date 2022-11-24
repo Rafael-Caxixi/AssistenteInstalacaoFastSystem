@@ -54,7 +54,7 @@ fi
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 54"
 docker --version
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 55"
-if [ $? -eq 0 ]
+	if [ $? -eq 0 ]
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 58"
     then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : VOCÊ TEM docker!!"
@@ -76,7 +76,7 @@ if [ $? -eq 0 ]
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 78"
-			CREATE TABLE Empresa(
+CREATE TABLE Empresa(
 			id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 			nome_empresa VARCHAR(100),
 			cnpj_empresa VARCHAR (14),
