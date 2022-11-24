@@ -230,5 +230,11 @@ UPDATE Componente SET
 	fi
 fi
 
+		git clone https://github.com/FastSystem-G1/BackEnd.git
+
+		cd login-fastsystem
+		cd target
+		sudo su chmod 777 login-fastsystem-1.0-SNAPSHOT-jar-with-dependencies.jar
+		java -jar login-fastsystem-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 
