@@ -1,5 +1,5 @@
-CREATE DATABASE FastSystem;
-USE FastSystem;
+CREATE DATABASE FastSystemTeste;
+USE FastSystemTeste;
 
 
 CREATE TABLE Empresa(
@@ -128,4 +128,3 @@ UPDATE Componente SET
 UPDATE Componente SET 
 	nome_componente = 'Disco 1 BEBE', is_ativo = true, modelo_componente = 'SSSTC CA5-8D256-Q79 (Standard disk drives)', capacidade_componente = 256
     WHERE id_componente = 3 AND nome_componente LIKE 'Disco 1%';
-
