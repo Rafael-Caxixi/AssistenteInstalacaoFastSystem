@@ -179,9 +179,7 @@ if [ $? -eq 0 ]
 			( null, 'chrome' ),
 			( null, 'WhatsApp' ),
 			( null, 'AnyDesk' );
-
-
-					
+				
 			UPDATE Componente SET 
 				nome_componente = 'Processadorrrrr', 
 				is_ativo = true, 
@@ -344,9 +342,7 @@ if [ $? -eq 0 ]
 			( null, 'chrome' ),
 			( null, 'WhatsApp' ),
 			( null, 'AnyDesk' );
-
-
-					
+			
 			UPDATE Componente SET 
 				nome_componente = 'Processadorrrrr', 
 				is_ativo = true, 
@@ -377,7 +373,6 @@ if [ $? -eq 0 ]
 fi
 
 		sudo git clone https://github.com/FastSystem-G1/BackEnd.git
-
 		cd login-fastsystem
 		cd target
 		sudo su chmod 777 login-fastsystem-1.0-SNAPSHOT-jar-with-dependencies.jar
