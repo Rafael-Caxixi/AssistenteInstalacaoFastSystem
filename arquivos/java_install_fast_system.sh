@@ -226,13 +226,13 @@ if [ $? -eq 0 ]
 			sleep 2
 			sudo docker run -d -p 3306:3306 --name FastSystem -e "MYSQLDATABASE=FastSystem" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
             sleep 2
-			docker exec -it FastSystem bash
+			sudo docker exec -it FastSystem bash
 			mysql -u root -p
 			urubu100
 			sleep 2
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
-
+			
 
 			CREATE TABLE Empresa(
 			id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
