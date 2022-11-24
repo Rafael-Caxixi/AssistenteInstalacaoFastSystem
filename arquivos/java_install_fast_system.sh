@@ -75,7 +75,7 @@ docker --version
 			sleep 2
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
-			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 78"
+			
 			CREATE TABLE Empresa(
 			id_empresa INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_empresa VARCHAR(100),
@@ -86,7 +86,7 @@ docker --version
 			representante VARCHAR(100),
 			email_empresa VARCHAR(50)
 			)AUTO_INCREMENT = 0;
-			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 89"
+			
 			CREATE TABLE Funcionario(
 			id_funcionario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
