@@ -76,8 +76,8 @@ docker --version
 			CREATE DATABASE FastSystem;
 			USE FastSystem;
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 78"
-CREATE TABLE Empresa(
-			id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			CREATE TABLE Empresa(
+			id_empresa INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_empresa VARCHAR(100),
 			cnpj_empresa VARCHAR (14),
 			cep_empresa VARCHAR(11),
@@ -88,7 +88,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 0;
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 89"
 			CREATE TABLE Funcionario(
-			id_funcionario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_funcionario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
 			nome_funcionario VARCHAR(100),
 			is_admin BINARY(1),
@@ -100,7 +100,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 100;
 
 			CREATE TABLE Maquina(
-			id_maquina INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_maquina INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
 			tipo_maquina VARCHAR(7),
 			CHECK (tipo_maquina = 'DESKTOP' or tipo_maquina = 'TOTEM'),
@@ -113,7 +113,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 0;
 
 			CREATE TABLE App(
-			id_app INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_app INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_app VARCHAR(60)
 			)AUTO_INCREMENT = 1000;
 
@@ -126,7 +126,7 @@ CREATE TABLE Empresa(
 			);
 
 			CREATE TABLE Registro_Processo(
-			id_registro_processo INT PRIMARY KEY AUTO_INCREMENT,
+			id_registro_processo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_processo VARCHAR(45),
 			data_hora DATETIME,
 			is_autorizado BINARY(1),
@@ -135,7 +135,7 @@ CREATE TABLE Empresa(
 			);
 
 			CREATE TABLE Componente(
-			id_componente INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_componente INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_componente VARCHAR(45),
 			is_ativo BINARY(1),
 			fabricante_componente VARCHAR(45),
@@ -146,7 +146,7 @@ CREATE TABLE Empresa(
 			);
 				
 			CREATE TABLE Tipo_Registro(
-			id_tipo_registro INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_tipo_registro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			descricao_tipo VARCHAR(20)
 			);
 
@@ -240,7 +240,7 @@ CREATE TABLE Empresa(
 			
 
 			CREATE TABLE Empresa(
-			id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_empresa INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_empresa VARCHAR(100),
 			cnpj_empresa VARCHAR (14),
 			cep_empresa VARCHAR(11),
@@ -251,7 +251,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 0;
 
 			CREATE TABLE Funcionario(
-			id_funcionario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_funcionario INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
 			nome_funcionario VARCHAR(100),
 			is_admin BINARY(1),
@@ -263,7 +263,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 100;
 
 			CREATE TABLE Maquina(
-			id_maquina INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_maquina INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			fk_empresa INT,
 			tipo_maquina VARCHAR(7),
 			CHECK (tipo_maquina = 'DESKTOP' or tipo_maquina = 'TOTEM'),
@@ -276,7 +276,7 @@ CREATE TABLE Empresa(
 			)AUTO_INCREMENT = 0;
 
 			CREATE TABLE App(
-			id_app INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_app INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_app VARCHAR(60)
 			)AUTO_INCREMENT = 1000;
 
@@ -289,7 +289,7 @@ CREATE TABLE Empresa(
 			);
 
 			CREATE TABLE Registro_Processo(
-			id_registro_processo INT PRIMARY KEY AUTO_INCREMENT,
+			id_registro_processo INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_processo VARCHAR(45),
 			data_hora DATETIME,
 			is_autorizado BINARY(1),
@@ -298,7 +298,7 @@ CREATE TABLE Empresa(
 			);
 
 			CREATE TABLE Componente(
-			id_componente INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_componente INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			nome_componente VARCHAR(45),
 			is_ativo BINARY(1),
 			fabricante_componente VARCHAR(45),
@@ -309,7 +309,7 @@ CREATE TABLE Empresa(
 			);
 				
 			CREATE TABLE Tipo_Registro(
-			id_tipo_registro INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+			id_tipo_registro INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 			descricao_tipo VARCHAR(20)
 			);
 
