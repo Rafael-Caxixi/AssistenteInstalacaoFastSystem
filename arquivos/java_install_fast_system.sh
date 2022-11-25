@@ -53,7 +53,7 @@ fi
 #----------------BAIXANDO O DOCKER -----------------#
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 54"
 docker --version
-	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 55"
+	
 	if [ $? -eq 0 ]
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 58"
     then
@@ -68,7 +68,9 @@ docker --version
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 69"
 			sleep 2
 			sudo docker exec -it FastSystem bash
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 71"
 			sleep 2
+			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 73"
 			mysql -u root -p
 			urubu100
 			CREATE DATABASE FastSystem;
