@@ -53,9 +53,7 @@ fi
 #----------------BAIXANDO O DOCKER -----------------#
 	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 54"
 docker --version
-	
 	if [ $? -eq 0 ]
-	echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : LINHA 58"
     then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Olá você já tem o docker instalado!!"
 		sleep 2
