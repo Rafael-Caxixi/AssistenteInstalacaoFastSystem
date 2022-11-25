@@ -1,5 +1,5 @@
-CREATE DATABASE FastSystemTeste;
-USE FastSystemTeste;
+CREATE DATABASE FastSystem;
+USE FastSystem;
 
 
 CREATE TABLE Empresa(
