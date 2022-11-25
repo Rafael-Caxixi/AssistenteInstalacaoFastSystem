@@ -31,7 +31,7 @@ fi
 		sleep 2
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
 		sleep 2
-			sudo docker build -t FastSystem .
-			sudo dokcer run FastSystem
+			sudo docker build -t fastsystem .
+			sudo dokcer run fastsystem
 			
 		
