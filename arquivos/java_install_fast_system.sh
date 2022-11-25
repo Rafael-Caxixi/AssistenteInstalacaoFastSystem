@@ -23,6 +23,7 @@ sudo apt-get install default-jre
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando Pacotes! Quase lá."
 sleep 2
 fi
+echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Baixando docker."
 sudo apt install docker.io 
 sleep 2
 sudo systemctl start docker
@@ -32,6 +33,4 @@ sleep 2
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
 sleep 2
 sudo docker build -t fastsystem .
-sudo docker run fastsystem
-			
-		
+sudo docker run fastsystem	
