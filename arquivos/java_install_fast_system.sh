@@ -19,18 +19,18 @@ sleep 2
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (Y/n)?"		
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o Java ;D"
 sleep 2
-sudo apt-get install default-jre
+install default-jre
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando Pacotes! Quase lá."
 sleep 2
 fi
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Baixando docker."
-sudo apt install docker.io 
+install docker.io 
 sleep 2
-sudo systemctl start docker
+systemctl start docker
 sleep 2
-sudo systemctl enable docker 
+systemctl enable docker 
 sleep 2
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
 sleep 2
-sudo docker build -t fastsystem .
-sudo docker run fastsystem	
+docker build -t fastsystem .
+docker run fastsystem	
