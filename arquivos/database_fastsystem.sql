@@ -1,7 +1,6 @@
 CREATE DATABASE FastSystem;
 USE FastSystem;
 
-
 CREATE TABLE Empresa(
 id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome_empresa VARCHAR(100),
