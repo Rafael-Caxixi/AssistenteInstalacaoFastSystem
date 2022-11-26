@@ -33,7 +33,7 @@ then
 	sudo systemctl enable docker
 	sudo docker build -t mysql .
 	sleep 30
-	sudo docker run --name FastSystem -p 3306:3306 mysql
+	sudo docker run -d --name FastSystem -p 3306:3306 mysql
 	sleep 10
 	
 else
