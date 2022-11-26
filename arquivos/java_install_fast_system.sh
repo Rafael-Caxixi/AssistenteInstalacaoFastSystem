@@ -31,9 +31,9 @@ then
 	sudo apt install docker.io -y
 	sudo systemctl start docker
 	sudo systemctl enable docker
-	sudo docker build -t mysql .
+	sudo docker build -t mysql:5.7 .
 	sleep 30
-	sudo docker run --name FastSystem -p 3306:3306 mysql
+	sudo docker run --name FastSystem -p 3306:3306 mysql:5.7
 	sleep 10
 	
 else
