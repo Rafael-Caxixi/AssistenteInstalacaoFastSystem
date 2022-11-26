@@ -25,13 +25,19 @@ sleep 2
 fi
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Baixando docker."
 docker --version
-if [ $? > 0 ]
-then 
-    sudo apt install docker.io -y
-    sudo systemctl start docker
-    sudo systemctl enable docker 
-    sudo docker build -t fastsystem .
-    sleep 30
-    sudo docker run --name fastsystem -p 3306:3306 fastsystem
-    sleep 10
+if [ $? > 0 ];
+then
+	echo "TESTE PARA VER SE FUNCIONA IF"
+	sudo apt install docker.io -y
+	sudo systemctl start docker
+	sudo systemctl enable docker
+	sudo docker build -t mysql .
+	sleep 30
+	sudo docker run --name FastSystem -p 3306:3306 mysql
+	sleep 10
+	
+else
+	echo "TESTE PARA VER SE FUNCIONA ELSE"
+	sudo docker start FastSystem
 fi
+	
