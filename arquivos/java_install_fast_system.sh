@@ -24,13 +24,10 @@ echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando Pacotes! Quas
 sleep 2
 fi
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Baixando docker."
-install docker.io 
-sleep 2
-systemctl start docker
-sleep 2
-systemctl enable docker 
-sleep 2
-echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Instalando o container mysql 5.7!"
-sleep 2
-docker build -t fastsystem .
-docker run fastsystem	
+sudo install docker.io 
+sudo systemctl start docker
+sudo systemctl enable docker 
+sudo docker build -t fastsystem .
+sleep 30
+sudo docker run --name fastsystem -p 3306:3306 fastsystem
+sleep 10
