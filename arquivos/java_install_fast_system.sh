@@ -19,15 +19,19 @@ sleep 2
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (Y/n)?"		
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o Java ;D"
 sleep 2
-install default-jre
+sudo apt-get install default-jre
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando Pacotes! Quase lá."
 sleep 2
 fi
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Baixando docker."
-sudo install docker.io 
-sudo systemctl start docker
-sudo systemctl enable docker 
-sudo docker build -t fastsystem .
-sleep 30
-sudo docker run --name fastsystem -p 3306:3306 fastsystem
-sleep 10
+docker --version
+if [ $? > 0 ]
+then 
+    sudo apt install docker.io -y
+    sudo systemctl start docker
+    sudo systemctl enable docker 
+    sudo docker build -t fastsystem .
+    sleep 30
+    sudo docker run --name fastsystem -p 3306:3306 fastsystem
+    sleep 10
+fi
